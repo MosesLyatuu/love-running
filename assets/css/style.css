@@ -99,6 +99,8 @@ main{
     background-color: lightblue;
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
+    /* So we can add a margin top of 47px to our main element to push the content down to see the placeholder in main element*/
+    margin-top: 47px;
 }
 
 /* Footer */
