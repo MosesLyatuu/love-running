@@ -26,6 +26,10 @@ header{
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    /* To show label X to the top right corner */
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 header a{
@@ -64,7 +68,31 @@ nav{
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
+    /* The menu is completely covering the rest of the header.
+       So what happened here?
+       The reason for this is the CSS positioning behaves differently
+       when we applied the flex property.
+       We can fix this by adding a top property to the nav element and setting it to 100%.*/
+       top: 100%;
 }
+
+/* Checkbox have pseudo class that indicates when they are checked*/
+/* Nav toggle */
+#nav-toggle:checked~nav{
+    display: block;
+}
+
+/* As clicking the label toggles the checkbox as well.
+   So let's hide the checkbox.*/
+#nav-toggle{
+    display: none;
+}
+
+/* To make the label larger so it's easier to tap*/
+.nav-toggle-label{
+    font-size: 2rem;
+}
+
 
 /* Main content */
 main{
