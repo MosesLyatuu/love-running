@@ -298,12 +298,22 @@ main {
         text-align: end;
         align-self: flex-end;
     }
+
+    /* Gallery */
+    #photos {
+        column-count: 3;
+    }
 }
 
 /* Large devices (laptops and desktops, 992px and up)*/
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+
+    /* Gallery */
+    #photos {
+        column-count: 4;
     }
 }
 
